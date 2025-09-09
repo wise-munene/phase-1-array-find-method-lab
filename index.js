@@ -5,9 +5,9 @@ const record =[
     {year :"2013", result: "L"},
 ]
 // function that singles out a single result 
-function superbowlWin(records) {
-  const win = records.find(function(game) {
+function superbowlWin(record) {
+  const win = record.find(function(game) {        // game is the object eg year:2015, result: w
     return game.result === "W";
   });
-  return win ? win.year : undefined;
+  return win ? win.year : undefined; // if a winning game is found return the year of that win , if no winning game return unefined
 }
